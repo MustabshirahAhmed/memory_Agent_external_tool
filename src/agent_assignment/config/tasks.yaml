@@ -1,0 +1,50 @@
+research_task:
+  description: >
+    Research {topic} thoroughly and identify important facts and developments.
+    During the research, use the available Calculator tool to perform at least
+    one mathematical calculation related to {topic}. Do not calculate the
+    result manually when the Calculator tool can be used.
+
+  expected_output: >
+    A research summary about {topic} containing key findings and the
+    mathematical calculation performed using the Calculator tool.
+
+  agent: researcher
+
+reporting_task:
+  description: >
+    Review the researcher's findings and create a clear report.
+    Include the research findings and the calculation performed by the
+    researcher.
+
+  expected_output: >
+    A complete Markdown report containing the main findings, calculation,
+    and a clear explanation of the results.
+
+  agent: reporting_analyst
+
+
+#temporary memory task for testing
+memory_task:
+  description: >
+    Recall information that was previously saved to your memory about the user.
+    Do not ask the user for the information again.
+    Retrieve the user's previously stored preference from memory and state it.
+
+  expected_output: >
+    State the user's previously stored favorite programming language
+    exactly as recalled from memory.
+
+  agent: memory_agent
+
+
+# memory_task:
+  # description: >
+  #   Remember the following user information: {user_information}.
+  #   Store this information in memory so it can be recalled in future
+  #   interactions.
+
+  # expected_output: >
+  #   Confirm that the information has been stored in memory.
+
+  # agent: memory_agent

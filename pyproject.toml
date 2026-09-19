@@ -1,0 +1,24 @@
+[project]
+name = "agent_assignment"
+version = "0.1.0"
+description = "agent_assignment using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=1.15.10,<2.0.0"
+]
+
+[project.scripts]
+agent_assignment = "agent_assignment.main:run"
+run_crew = "agent_assignment.main:run"
+train = "agent_assignment.main:train"
+replay = "agent_assignment.main:replay"
+test = "agent_assignment.main:test"
+run_with_trigger = "agent_assignment.main:run_with_trigger"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
